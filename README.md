@@ -1,2 +1,4 @@
-# lottery-eth
-meet lottery in eth
+# 基于以太坊-区块链彩票实战
+
+
+
