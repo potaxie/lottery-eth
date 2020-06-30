@@ -46,3 +46,5 @@ let deploy = async () => {
 
     console.log('instance_address_____', instance.options.address)
 }
+
+deploy()
