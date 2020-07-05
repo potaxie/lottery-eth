@@ -6,7 +6,7 @@ let abi = [
     {
         "constant": false,
         "inputs": [],
-        "name": "kaijiang",
+        "name": "kaiJiang",
         "outputs": [],
         "payable": false,
         "stateMutability": "nonpayable",
@@ -24,7 +24,7 @@ let abi = [
     {
         "constant": false,
         "inputs": [],
-        "name": "tuijiang",
+        "name": "tuiJiang",
         "outputs": [],
         "payable": false,
         "stateMutability": "nonpayable",
@@ -53,11 +53,11 @@ let abi = [
     {
         "constant": true,
         "inputs": [],
-        "name": "getPlayers",
+        "name": "getPlayCount",
         "outputs": [
             {
                 "name": "",
-                "type": "address[]"
+                "type": "uint256"
             }
         ],
         "payable": false,
@@ -67,11 +67,11 @@ let abi = [
     {
         "constant": true,
         "inputs": [],
-        "name": "getPlayersCount",
+        "name": "getPlayers",
         "outputs": [
             {
                 "name": "",
-                "type": "uint256"
+                "type": "address[]"
             }
         ],
         "payable": false,
@@ -124,27 +124,15 @@ let abi = [
         "payable": false,
         "stateMutability": "view",
         "type": "function"
-    },
-    {
-        "constant": true,
-        "inputs": [],
-        "name": "winner",
-        "outputs": [
-            {
-                "name": "",
-                "type": "address"
-            }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
     }
 ]
 
 //用instant_address
-let address = '0x9C423642f674fdD6519ab3303A96ff17e7A8e918' //此处是合约地址
+let address = '0xd4DB91aCBB5Be2a42276567c7473857e14888B53' //此处是合约地址
 
 //此处abi已经json对象，不需要进行parse动作
 let contractInstance = new web3.eth.Contract(abi, address)
 console.log('address1__________', contractInstance.options.address)
+console.log('methods__________', contractInstance.methods)
+
 module.exports = contractInstance
